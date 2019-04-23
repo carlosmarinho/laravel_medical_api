@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(array('prefix' =>'apiLaravel'), function(){
+    Route::get('/', function () {
+       return response()->json(['message' => 'API Laravel', 'status' => 'Connected']);
+    });
+    Route::resource('doctors', 'DoctorsController');
 });
