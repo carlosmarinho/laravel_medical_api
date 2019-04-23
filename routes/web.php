@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(array('prefix' =>'apiLaravel'), function(){
+Route::group(array('prefix' =>'api'), function(){
     Route::get('/', function () {
        return response()->json(['message' => 'API Laravel', 'status' => 'Connected']);
     });
