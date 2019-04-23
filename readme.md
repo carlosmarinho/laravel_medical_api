@@ -17,3 +17,11 @@ CREATE DATABASE medical CHARACTER SET utf8 COLLATE utf8_general_ci;
         DB_DATABASE=medical
         DB_USERNAME=<SEU USER>
         DB_PASSWORD=<SUA PASSWORD>
+
+### Rodar as migrations
+
+ - php artisan migrate
+ 
+### Rodar as seeds
+
+ - php artisan db:seed
