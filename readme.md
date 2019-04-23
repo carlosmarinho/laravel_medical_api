@@ -25,3 +25,7 @@ CREATE DATABASE medical CHARACTER SET utf8 COLLATE utf8_general_ci;
 ### Rodar as seeds
 
  - php artisan db:seed
+
+### Para rodar a aplicação
+
+ - php artisan serve
