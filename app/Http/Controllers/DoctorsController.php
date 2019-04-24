@@ -16,4 +16,16 @@ class DoctorsController extends Controller
         }
         return response()->json($Doctors);
     }
+
+    public function show($id){
+
+        $Doctor = Doctors::find($id);
+        if(!$Doctor){
+           return response()->json([
+              'message' => 'Registro não encontrado',
+           ],404);
+        }
+        return response()->json($Doctor);
+     }
+
 }
