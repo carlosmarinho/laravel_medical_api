@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(array('prefix' =>'api'), function(){
+Route::group(array('prefix' =>'api', 'middleware' => ['api', 'cors']), function(){
     Route::get('/', function () {
        return response()->json(['message' => 'API Laravel', 'status' => 'Connected']);
     });
