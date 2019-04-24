@@ -19,7 +19,7 @@ class CreateDoctorsTable extends Migration
             $table->string('crm', 50);
             $table->string('telefone', 20);
             $table->integer('activity_id')->unsigned();
-            $table->date('deleted_at');
+            $table->softDeletes();
             $table->timestamps();
             $table->foreign('activity_id')->references('id')->on('activities');
         });
