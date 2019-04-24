@@ -8,13 +8,21 @@ use App\Doctors;
 class DoctorsController extends Controller
 {
     public function index(){
-        $Doctors = Doctors::all();
-        if(!$Doctors){
+       /*@todo find a way in laravel to get all with associations */
+        $doctors = Doctors::all();
+        $ar_doctors = [];
+        if(!$doctors){
            return response()->json([
               'message' => 'Nenhum registro encontrado',
            ],404);
         }
-        return response()->json($Doctors);
+        else{
+            foreach($doctors as $doctor){
+               $doctor['activity'] = $doctor->activity;
+               $ar_doctors[] = $doctor;
+            }   
+        }
+        return response()->json($ar_doctors);
     }
 
     public function show($id){
@@ -53,6 +61,7 @@ class DoctorsController extends Controller
     }
 
     public function destroy($id){
+        
         $Doctor = Doctors::find($id);
     
         if(!$Doctor) {
