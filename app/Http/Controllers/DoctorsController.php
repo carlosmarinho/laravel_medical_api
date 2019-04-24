@@ -37,4 +37,19 @@ class DoctorsController extends Controller
         return response()->json($Doctor, 201);
     }
 
+    public function update(Request $request, $id){
+        $Doctor = Doctors::find($id);
+     
+        if(!$Doctor) {
+           return response()->json([
+              'message' => 'Registro não encontrado',
+           ], 404);
+        }
+     
+        $Doctor->fill($request->all());
+        $Doctor->save();
+     
+        return response()->json($Doctor);
+    }
+
 }
