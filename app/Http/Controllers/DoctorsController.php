@@ -28,4 +28,13 @@ class DoctorsController extends Controller
         return response()->json($Doctor);
      }
 
+     public function store(Request $request){
+
+        $Doctor = new Doctors;
+        $Doctor->fill($request->all());
+        $Doctor->save();
+    
+        return response()->json($Doctor, 201);
+    }
+
 }
