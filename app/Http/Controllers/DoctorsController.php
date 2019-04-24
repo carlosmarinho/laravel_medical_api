@@ -52,4 +52,20 @@ class DoctorsController extends Controller
         return response()->json($Doctor);
     }
 
+    public function destroy($id){
+        $Doctor = Doctors::find($id);
+    
+        if(!$Doctor) {
+          return response()->json([
+             'message' => 'Registro não encontrado!',
+          ], 404);
+        }
+    
+        $Doctor->delete();
+    
+        return response()->json([
+           'message' => 'Registro deletado',
+        ], 200);
+    }
+
 }
