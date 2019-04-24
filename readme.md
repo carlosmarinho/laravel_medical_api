@@ -32,9 +32,9 @@ CREATE DATABASE medical CHARACTER SET utf8 COLLATE utf8_general_ci;
  
 ### URLs da api
 
- Listar Médicos - GET http://<server>:<port>/api/doctors/
- Visualizar Médico - GET http://<server>:<port>/api/doctors/<id>
- Atualizar Médico - PUT http://<server>:<port>/api/doctors/<id>
- Cadastrar Médico - POST http://<server>:<port>/api/doctors/
- Excluir Médico - Delete http://<server>:<port>/api/doctors/<id>
+ - Listar Médicos - GET http://<server>:<port>/api/doctors/
+ - Visualizar Médico - GET http://<server>:<port>/api/doctors/<id>
+ - Atualizar Médico - PUT http://<server>:<port>/api/doctors/<id>
+ - Cadastrar Médico - POST http://<server>:<port>/api/doctors/
+ - Excluir Médico - Delete http://<server>:<port>/api/doctors/<id>
  
