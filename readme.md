@@ -51,5 +51,5 @@ CREATE DATABASE medical CHARACTER SET utf8 COLLATE utf8_general_ci;
 ### @todo
  
  - Fazer algumas validações nas apis
- - Fazer os testes unitários para cobrir 100% de caso, pois foram feitos somente 2 testes muito rápido que só cobrem 2 casos
+ - Fazer os testes unitários para cobrir 100% de caso, pois foram feitos somente 2 testes unitários muito rápido que só cobrem 2 casos
 
