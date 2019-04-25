@@ -47,4 +47,9 @@ CREATE DATABASE medical CHARACTER SET utf8 COLLATE utf8_general_ci;
  - Atualizar Especialidade - PUT http://&lt;server&gt;:&lt;port&gt;/api/activities/&lt;id&gt;
  - Cadastrar Especialidades - POST http://&lt;server&gt;:&lt;port&gt;/api/activities/
  - Excluir Especialidades - Delete http://&lt;server&gt;:&lt;port&gt;/api/activities/&lt;id&gt;
+ 
+### @todo
+ 
+ - Fazer algumas validações nas apis
+ - Fazer os testes unitários para cobrir 100% de caso, pois foram feitos somente 2 testes muito rápido que só cobrem 2 casos
 
