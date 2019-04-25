@@ -16,4 +16,5 @@ Route::group(array('prefix' =>'api', 'middleware' => ['api', 'cors']), function(
        return response()->json(['message' => 'API Laravel', 'status' => 'Connected']);
     });
     Route::resource('doctors', 'DoctorsController');
+    Route::resource('activities', 'ActivitiesController');
 });
